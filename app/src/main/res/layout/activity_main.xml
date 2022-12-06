@@ -8,7 +8,17 @@
     android:id="@+id/mainScreen"
     tools:context=".ui.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         style="?attr/materialCardViewElevatedStyle"
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -41,8 +51,8 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="30dp"
                     android:text="Nombre personaje"
-                    android:textStyle="bold"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -53,18 +63,18 @@
                         android:id="@+id/tvStateCharacter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Estado"/>
+                        android:text="Estado" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" - "/>
+                        android:text=" - " />
 
                     <TextView
                         android:id="@+id/tvSpecieCharacter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Especie"/>
+                        android:text="Especie" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -72,14 +82,24 @@
                     android:id="@+id/tvGenderCharacter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="15dp"
-                    android:text="Genero"/>
+                    android:layout_marginTop="10dp"
+                    android:text="Genero" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/button"
+        android:text="Add To Favorites"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
