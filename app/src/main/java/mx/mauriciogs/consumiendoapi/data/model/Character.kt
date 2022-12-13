@@ -17,7 +17,7 @@ data class Character(
     val url: String
 )
 
-fun Character.toCharacter(): Character {
+fun mx.mauriciogs.consumiendoapi.data.model.Character.toCharacter(): Character {
     return Character(
         id = id,
         name = name,
